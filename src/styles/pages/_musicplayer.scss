@@ -1,0 +1,130 @@
+@use "../utils/variables" as *;
+
+.player {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+    &__back-button {
+        background: none;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+
+    &__vinyl-container {
+        margin-bottom: 4rem;
+    }
+
+    &__status {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 0.875rem;
+        color: $primary;
+    }
+
+
+    &__vinyl {
+        width: 17.5rem;
+        margin: 0 auto;
+        z-index: 1;
+
+        &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__waveform {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 70%;
+        background: url("/soundwaveplayer.png") no-repeat center;
+        background-size: contain;
+        transform: translateX(-50%);
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    &__info {
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    &__artist {
+        font-size: 0.875rem;
+        color: $primary;
+    }
+
+    &__progress {
+        width: 100%;
+        margin: 1.5rem 0;
+
+        & .player__slider {
+            width: 100%;
+            appearance: none;
+            height: 0.25rem;
+            background: linear-gradient(to right, $primary-gradient, $secondary-gradient);
+            border-radius: 0.125rem;
+            outline: none;
+
+            &::-webkit-slider-thumb {
+                appearance: none;
+                width: 0.875rem;
+                height: 0.875rem;
+                background: $secondary;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+
+        & .player__time {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: $primary;
+            margin-top: 0.25rem;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        & .player__control {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+
+            &--play {
+                background: linear-gradient(to right, $primary-gradient, $secondary-gradient);
+                color: $white;
+                width: 3.75rem;
+                height: 3.75rem;
+                border-radius: 50%;
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.header {
+    position: relative;
+    z-index: 10;
+}

@@ -1,0 +1,93 @@
+.playlist-hero {
+  background: linear-gradient(135deg, #ff5f6d, #ff9966);
+  padding: 2rem 1rem 3rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  text-align: center;
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+
+  .playlist-swiper {
+    .playlist-card {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.playlist-list {
+  padding: 1.5rem;
+
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .playlist-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #f1f1f1;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      .play-btn {
+        background: linear-gradient(135deg, #ff5f6d, #ff9966);
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .playlist-name {
+        font-weight: 600;
+      }
+
+      .playlist-owner {
+        font-size: 0.8rem;
+        color: #666;
+      }
+    }
+
+    .duration {
+      font-size: 0.9rem;
+      color: #444;
+    }
+  }
+}
+
+.listen-all {
+  text-align: center;
+  margin: 2rem 0;
+
+  button {
+    border: 2px solid #ff5f6d;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    background: transparent;
+    font-weight: 700;
+    color: #ff5f6d;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: linear-gradient(135deg, #ff5f6d, #ff9966);
+      color: #fff;
+    }
+  }
+}

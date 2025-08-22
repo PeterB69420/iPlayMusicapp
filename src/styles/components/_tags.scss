@@ -1,0 +1,16 @@
+@use "../utils/variables" as *;
+
+.filter-tags {
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem;
+    .tag {
+      background: $secondary;
+      border-radius: 20px;
+      color: $white;
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      border: none;
+      font-weight: bolder;
+    }
+  }

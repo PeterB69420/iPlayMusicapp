@@ -1,0 +1,92 @@
+@use "../utils/variables" as *;
+
+.album-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        color: $white;
+    }
+
+    &__overlay {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem 1rem;
+        margin-top: 4rem;
+        color: $white;
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+    }
+
+
+    &__song-count {
+        font-size: 1rem;
+        color: $white;
+        font-weight: bold;
+        margin-bottom: 7rem;
+    }
+}
+
+// album songs 
+
+.album-songs {
+     padding: 1rem;
+
+        &__title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+     &__list-container {
+         display: flex;
+         flex-direction: column;
+     }
+
+    
+     &__item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 0.5rem 0;
+         margin-bottom: 1rem;
+     }
+
+      &__item-play {
+        color: white;
+        background: linear-gradient(135deg, #FF6A00, #EE0979);
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 14px;
+        margin-right: 12px;
+        min-width: 36px;
+        min-height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

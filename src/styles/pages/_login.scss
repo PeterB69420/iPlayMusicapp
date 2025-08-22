@@ -1,0 +1,88 @@
+@use "../utils/variables" as *;
+
+.login {
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    
+    &__title {
+        font-size: 2.25rem;
+        margin-bottom: 12rem;
+        font-weight: bolder;
+    }
+
+    
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    &__form-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    &__label {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        padding: 0.5rem 0rem;
+        border-bottom: 3px solid $primary;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 8px;
+        bottom: 10px;
+        font-size: 1.5rem;
+        
+    }
+
+    &__button {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $primary;
+        background-color: $white;
+        border: 3px solid $primary;
+        border-radius: 3rem;
+        text-decoration: none;
+        margin-bottom: 2rem;
+    }
+
+}
+
+.touch {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary;
+    border-radius: 10rem;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 1rem;
+    &__icon {
+        font-size: 3rem;
+        color: $white;
+    }
+}
+
+.touch__text {
+    color: $primary;
+    text-transform: capitalize;
+    text-align: center;
+}
