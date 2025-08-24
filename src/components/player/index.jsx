@@ -136,7 +136,6 @@ export default function Player() {
 						{playerState.isPaused ? <IoMdPlay /> : <IoPauseSharp />}
 					</button>
 					<p className="player__track-name">{currentTrack.name}</p>
-					<p className="player__artist-name">{currentTrack.artists.map(artist => artist.name).join(", ")}</p>
 				</div>
 				<input
 					className="player__seek-bar"

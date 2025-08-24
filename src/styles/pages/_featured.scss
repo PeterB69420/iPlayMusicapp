@@ -1,51 +1,41 @@
 @use "../utils/variables" as *;
 
-.featured {
-    font-family: 'Poppins', sans-serif;
-    padding: 1rem;
+.featured-card {
+    position: relative;
+    overflow: hidden;
 
-    &__title {
-        font-size: 2rem;
-        font-weight: bolder;
-        text-transform: capitalize;
-        background: linear-gradient(90deg, $primary-gradient, $secondary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        margin-bottom: 1rem;
-    }
-
-    &__card {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin-bottom: 2rem;
-    }
-
-    &__image {
+    .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        height: 425px;
-        display: block;
+        height: 100%;
+
+        img {
+            border-radius: 1rem; 
+        }
     }
 
-    &__card-info {
+    .info-overlay {
         position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        color: $white;
-        margin-bottom: 3rem;
-    }
+        bottom: 2rem; 
+        left: 3rem; 
+        right: 1.5rem; 
+        color: #ffffff;
+        z-index: 10;
 
-    &__card-info-title {
-        font-size: 2rem;
-        text-transform: capitalize;
-        margin-bottom: 1rem;
-    }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600; 
+            
+        }
 
-    &__card-info-desc {
-        font-size: 0.7rem;
-        text-transform: capitalize;
+        .artists {
+            font-size: 0.875rem;
+        }
+
+        .album-type {
+            text-transform: uppercase;
+        }
     }
 }

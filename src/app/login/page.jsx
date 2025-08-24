@@ -12,28 +12,9 @@ import "@/styles/pages/_login.scss";
 
 
 export default function Login() {
-    // const [showSplash, setShowSplash] = useState(true);
-    // const [fadeOut, setFadeOut] = useState(false);
-
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setFadeOut(true);
-    //         setTimeout(() => {
-    //             setShowSplash(false);
-    //         }, 1000);
-    //     }, 3000);
-
-    //     return () => clearTimeout(timer);
-    // }, []);
 
     return (
         <>
-            {/* {showSplash && (
-                <div className={`splash-screen ${fadeOut ? "splash-screen--fade-out" : ""}`}>
-                    <Image src="" alt="Splash Screen" width={500} height={500} className="splash-image animate__animated animate__fadeIn" />
-                </div>
-            )}
-            {!showSplash && ( */}
                 <Wrapper>
                     <section className="login">
                         <h2 className="login__title">Log In</h2>
@@ -79,7 +60,6 @@ export default function Login() {
                         <p className="touch__text">one-touch login</p>
                     </section>
                 </Wrapper>
-            {/* )} */}
         </>
     );
 }
