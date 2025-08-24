@@ -10,7 +10,7 @@ import { playerContext } from "@/app/providers/player-provider";
 
 
 
-export default function AlbumSong({ song }) {
+export default function PlaylistSong({ song }) {
   const { setShowPlayer, setCurrentTrack } = useContext(playerContext);
 
   async function clickHandler(event) {
@@ -19,17 +19,17 @@ export default function AlbumSong({ song }) {
   }
 
   return (
-    <div className="album-songs__container">
-      <ul className="album-songs__list">
-        <li className="album-songs__item" >
-          <button onClick={clickHandler} className="album-songs__item-play">
+    <div className="playlist-songs__container">
+      <ul className="playlist-songs__list">
+        <li className="playlist-songs__item" >
+          <button onClick={clickHandler} className="playlist-songs__item-play">
             <IoMdPlay />
           </button>
-          <div className="album-songs__item-details">
-            <span className="album-songs__item-title">{song.name}</span>
-            <span className="album-songs__item-artist">{song.artists.map(artist => artist.name).join(", ")}</span>
+          <div className="playlist-songs__item-details">
+            <span className="playlist-songs__item-title">{song.name}</span>
+            <span className="playlist-songs__item-artist">{song.artists.map(artist => artist.name).join(", ")}</span>
           </div>
-          <span className="album-songs__item-duration">
+          <span className="playlist-songs__item-duration">
             {msToTime(song.duration_ms)}
           </span>
         </li>

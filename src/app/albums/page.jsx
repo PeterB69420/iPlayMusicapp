@@ -29,7 +29,7 @@ export default async function Albums() {
             "authorization": `Bearer ${access_token.value}`
         }
     });
-    
+
     const data = await response.json();
     console.log("data", data);
     const newdata = await newresponse.json();
@@ -46,7 +46,7 @@ export default async function Albums() {
                             <p className="albums__view-all">view all</p>
                         </div>
                         <div className="albums__featured-list">
-                             {data.albums.items.map(albums => <AlbumsCard key={albums.id} album={albums} />)}
+                            {data.albums.items.map(albums => <AlbumsCard key={albums.id} album={albums} />)}
                         </div>
                     </section>
                     <section className="albums__section">

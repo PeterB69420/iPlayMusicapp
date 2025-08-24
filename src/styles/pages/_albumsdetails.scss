@@ -89,4 +89,10 @@
         justify-content: center;
         align-items: center;
     }
+
+    &__item-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
 }
